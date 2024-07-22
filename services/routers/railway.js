@@ -80,6 +80,25 @@ router.post('/railway/reservations', async (req, res) => {
     }
 });
 
+
+// dates: DateTime = []
+// req.body = {
+// name: ""
+// dates: []
+// }
+router.post('/railway/reservation/search', async (req, res) => {
+    try{
+        const body = req.body;
+        const dates = body.dates;
+        const names = body.name;
+        const result = await scheduleModel.find({name: {$in: names}, date: {$in: dates}})
+        res.status(200).json(result);
+    }
+    catch(err){
+        res.status(500).json(err);
+    }
+})
+
 router.get('/railway/reservations', async (req, res) => {
     try {
         const result = await reservationModel.find()

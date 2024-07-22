@@ -20,6 +20,7 @@ class Reservations extends Component {
         this.updateReservations();
     }
 
+    // TODO: integrate api here
     componentDidUpdate(prevProps, prevState) {
         if (prevState.searchQuery !== this.state.searchQuery || prevState.offset !== this.state.offset) {
             this.paginateReservations();
