@@ -1,5 +1,5 @@
 {
-    "mongoDB": "mongodb://localhost:27017/railway",
+    "mongoDB": "mongodb+srv://kevin22010038:pJgjIdxCI2PFlYCc@cluster.bg3kvbo.mongodb.net/railway?retryWrites=true&w=majority&appName=Cluster",
     "govAPI": "http://localhost:3001/gov/employee/",
     "emailClient": {
         "host": "smtp.gmail.com",
